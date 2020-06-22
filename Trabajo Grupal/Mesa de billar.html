@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    </head>
+        <body>
+            <a-scene>
+                <a-assets>
+                    <img id="madera" src="images\caoba madera.jpg">
+                    <img id="taco" src="images\madera_taco.jpg">
+                </a-assets>
+                <!-- Suplementos para la vista -->
+                <a-text value="LA MESA DE BILLAR" position="-20 3 20" width="100" color="black"></a-text>
+                <a-light color="white" position="1 25 16"></a-light>
+                <a-light color="white" position="0 10 18"></a-light>
+                <!-- Suelo -->
+                <a-plane position="0 1 0" rotation="270 0 0" height="50" width="50" color="#89FF3C" depth="0.5"></a-plane>
+                <!-- Mesa de Billar -->   
+                <a-box src="#madera" width="40" height="4" depth="32" position="0 22 0"></a-box>
+                <a-box position="0 23.8 0" rotation="270 0 0" height="28" width="36" depth="0.5" color="green"></a-box>
+                <!-- Base de Billar -->   
+                <a-box src="#madera" width="32" height="16" depth="23" position="0 12 0"></a-box>
+                <a-box src="#madera" width="4" height="20" depth="4" position="15 10 12"></a-box>
+                <a-box src="#madera" width="4" height="20" depth="4" position="-15 10 12"></a-box>
+                <a-box src="#madera" width="4" height="20" depth="4" position="15 10 -12"></a-box>
+                <a-box src="#madera" width="4" height="20" depth="4" position="-15 10 -12"></a-box>
+                <a-box src="#madera" width="4" height="20" depth="4" position="0 10 12"></a-box>
+                <a-box src="#madera" width="4" height="20" depth="4" position="0 10 -12"></a-box>
+                <!-- Bolas y el Taco -->   
+                <a-cone position="0 24.5 0" height = "45" rotation="269.6 20 45" radius-top="0.3" radius-bottom="0.6" src="#taco" color="#D17C00"></a-cone>
+                <a-sphere   radius="1" position="4 25 5" color="orange"></a-sphere>
+                <a-sphere   radius="1" position="10 25 10" color="pink"></a-sphere>
+                <!-- Camera --> 
+                <a-camera position="0 30 55" user-height="0"></a-camera>
+            </a-scene>    
+        </body>
+</html>
